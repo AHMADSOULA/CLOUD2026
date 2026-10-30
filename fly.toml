@@ -1,0 +1,13 @@
+app = "cloud-main-bot-change-this"
+primary_region = "ams"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[processes]
+  app = "python main.py"
+
+[env]
+  HEADLESS = "true"
+  PAGE_TIMEOUT = "60"
+  NAV_TIMEOUT = "120"

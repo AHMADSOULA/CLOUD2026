@@ -1,0 +1,7 @@
+النسخة المجمّعة من الملفات المرفوعة:
+- الأساس: Cloud-main (6).zip (23-10-2026) لأنه أحدث مشروع كامل.
+- إصلاح خطوة Welcome والسهم والتصوير: CloudRun_arrow_screenshot_fix_files_only.zip.
+- إصلاح الموافقة الاختيارية: CloudRun_consent_fix_files_only.zip.
+- إصلاح تشخيص تسجيل الدخول والتصوير وعدم تصنيف صفحة Sign-in كحساب محذوف: CloudRun_diagnostics_fix_files_only-1.zip (ملف sso_flow.py فقط).
+- لم نستخدم automation/console.py من diagnostics لأنه يحتوي على خطوة Welcome غير معرفة كدالة بسبب تعليق مدموج.
+ملاحظة: لم يتم اختبار الدخول والنشر الفعليين على حساب Google/Cloud Run؛ تم فحص سلامة الأرشيف وتركيب ملفات Python.
