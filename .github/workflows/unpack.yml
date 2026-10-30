@@ -1,0 +1,31 @@
+
+name: Unpack Cloud Bot Files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract bot files
+        run: |
+          unzip -o Cloud-main_FlyIO_READY.zip
+          cp -a Cloud-main_latest/. .
+          rm -rf Cloud-main_latest
+          rm -f Cloud-main_FlyIO_READY.zip
+
+      - name: Commit extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Install Cloud Run bot files" || echo "No changes"
+          git push
